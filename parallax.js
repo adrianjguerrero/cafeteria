@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(anchoVentana>800){
             
-            var scroll = $(window).scrollTop();
+            // var scroll = $(window).scrollTop();
+
+            var scroll = window.pageYOffset;
+            var aboutArticle = document.querySelector('.acercade article');
 
             //parallax hacia abajo para el cafe licidad
             // $('header .textos').css({
@@ -21,13 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 */
             // });
 
-            $('.acercade article').css({
-                'transform':'translate(0px,-' + scroll/5 + '%)'
-                /* y este esta en negativo para que vaya hacia arriba
-                *porque pues scrollea hacia abajo lmao
-                */
+            // $('.acercade article').css({
+            //     'transform':'translate(0px,-' + scroll/5 + '%)'
+            //     /* y este esta en negativo para que vaya hacia arriba
+            //     *porque pues scrollea hacia abajo lmao
+            //     */
               
-            });
+            // });
+
+            /* wihout jquery */
+            aboutArticle.style.transform = `translate(0px, -${scroll/5}%)`
             
         }
     });
