@@ -2,14 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var anchoVentana = document.documentElement.clientWidth;
 
-    $(window).scroll(function(){
+    window.addEventListener('scroll',function(){
+
+        var aboutArticle = document.querySelector('.acercade article');
 
         if(anchoVentana>800){
             
             // var scroll = $(window).scrollTop();
 
             var scroll = window.pageYOffset;
-            var aboutArticle = document.querySelector('.acercade article');
 
             //parallax hacia abajo para el cafe licidad
             // $('header .textos').css({
@@ -37,15 +38,25 @@ document.addEventListener('DOMContentLoaded', function() {
             
         }
     });
+
     //cada que haya un cambio del tamaño en la ventana(como voltear tabla)
-        $(window).resize(function(){
+
+
+        
+        window.addEventListener('resize',function(){
 
 
             if(anchoVentana<800){
-                $('article .acercade').css({
-                    'transform':'translate(0px,0px)'
-                    //reiniciaremos sus valores, para asi no se vea feo al hacer resisa
-                });
+                // $('article .acercade').css({
+                //     'transform':'translate(0px,0px)'
+                // });
+                
+                /* without jquery */
+                aboutArticle.style.transform = 'translate(0px,0px)'
+
+
+                
+                //     //reiniciaremos sus valores, para asi no se vea feo al hacer resisa
             }
 
         });
