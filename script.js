@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scroll({
           behavior: 'smooth',
           left: 0,
-          top: menu + 550
+          top: menu + 550 /* el offset lo agarra mal, idk why, +500 para arreglarlo */
         });
 
   })
