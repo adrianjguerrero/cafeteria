@@ -22,7 +22,7 @@ body {
 
 header{
     width: 100%;
-    background: url('img/portadabg.png') #281a06;
+    background: url('../img/portadabg.png') #281a06;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 center;
@@ -131,7 +131,7 @@ header .textos h3{
 /*--    MAIN   --*/
 
 .main{
-    background: url('img/white_leather.png');
+    background: url('../img/white_leather.png');
     background-repeat: repeat;
 }
 
