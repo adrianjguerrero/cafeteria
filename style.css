@@ -69,14 +69,17 @@ header .menu a:nth-child(4){
 }
 
 @keyframes down{
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
+
     from{
         opacity: 0;
         transform: translateY(-66px);
     }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
 }
 
 header .menu a:hover{
@@ -87,10 +90,26 @@ header .menu a:hover{
 header .textos{
     width: 100%;
     color: white;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    margin-top: -52px;
+    margin-top: -52px; */
+    transform: translateY(175%);
+    opacity: 1;
     text-align: left;
+    animation: up 2s ease-in-out;
+}
+
+@keyframes up{
+
+    from{
+        opacity: 0;
+        transform: translateY(450%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(175%);
+    }
 }
 
 header .textos .nombre{
@@ -321,6 +340,8 @@ footer .copyright{
     header .textos{
         position: static;
         margin: 100px 0;
+        animation: unset;
+        transform: unset;
     }
     
     header .menu{

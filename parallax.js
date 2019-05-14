@@ -8,8 +8,8 @@ $(document).ready(function () {
             var scroll = $(window).scrollTop();
 
             //parallax hacia abajo para el cafe licidad
-            $('header .textos').css({
-                'transform':'translate(0px,' + scroll/2 + '%)'
+            // $('header .textos').css({
+                // 'transform':'translate(0px,' + scroll/2 + '%)'
                 /*acedemos a header, le modificamos su css la propiedad transform,
                 *en translate el primer valor representa movimiento horizontal, el segundo vertical
                 * La function de CSS translate() recoloca un elemento en el eje horizontal y/o vertical.
@@ -18,7 +18,7 @@ $(document).ready(function () {
                 * damn que complejo, y esta concatenado, esa vaina son strings lmao
                 * 
                 */
-            });
+            // });
 
             $('.acercade article').css({
                 'transform':'translate(0px,-' + scroll/5 + '%)'
