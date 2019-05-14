@@ -47,6 +47,36 @@ header .menu a{
     margin: 40px 20px;
     text-decoration: none;
     position: relative;
+    transform: translateY(0px);
+    opacity: 1;
+    /* animation: down 1.5s ease-in-out; */
+}
+
+header .menu a:first-child{
+    animation: down 1.5s ease-in-out;
+}
+
+header .menu a:nth-child(2){
+    animation: down 2s ease-in-out;
+}
+
+header .menu a:nth-child(3){
+    animation: down 2.5s ease-in-out;
+}
+
+header .menu a:nth-child(4){
+    animation: down 3s ease-in-out;
+}
+
+@keyframes down{
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+        transform: translateY(-66px);
+    }
 }
 
 header .menu a:hover{
@@ -298,7 +328,7 @@ footer .copyright{
     }
 
     header .menu a{
-        margin: 10 px 20px;
+        margin: 10px 20px;
     }
 
     header .textos .nombre{

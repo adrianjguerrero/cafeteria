@@ -1,17 +1,17 @@
 $(document).ready(function() {
   //Animacion menu
-  $(".menu a").each(function(index, elemento) {
-    $(this).css({
-      top: "-200px"
-    });
+  // $(".menu a").each(function(index, elemento) {
+  //   $(this).css({
+  //     top: "-200px"
+  //   });
 
-    $(this).animate(
-      {
-        top: "0"
-      },
-      2000 + index * 500
-    );
-  });
+  //   $(this).animate(
+  //     {
+  //       top: "0"
+  //     },
+  //     2000 + index * 500
+  //   );
+  // });
 
   //Animacion Header
   if ($(window).width() > 800) {
