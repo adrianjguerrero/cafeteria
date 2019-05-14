@@ -7,408 +7,330 @@
 body {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-
 }
 
-.contenedor{
-    width: 90%;
-    max-width:1000px;
-    margin: auto;
-    overflow: hidden;
-
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
 }
 
 /*--    HEADER      --*/
-
-header{
-    width: 100%;
-    background: url('../img/portadabg.png') #281a06;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 0 center;
-
+header {
+  width: 100%;
+  background: url("../img/portadabg.png") #281a06;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 center;
 }
-
 header .contenedor {
-    position: relative;
-    height: 700px;
+  position: relative;
+  height: 700px;
+}
+header .menu {
+  width: 100%;
+  text-align: right;
+}
+header .menu a {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+  margin: 40px 20px;
+  text-decoration: none;
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+  /* animation: down 1.5s ease-in-out; */
+}
+header .menu a:first-child {
+  animation: down 1.5s ease-in-out;
+}
+header .menu a:nth-child(2) {
+  animation: down 2s ease-in-out;
+}
+header .menu a:nth-child(3) {
+  animation: down 2.5s ease-in-out;
+}
+header .menu a:nth-child(4) {
+  animation: down 3s ease-in-out;
+}
+header .menu a:hover {
+  text-decoration: underline;
+}
+header .textos {
+  width: 100%;
+  color: white;
+  /* position: absolute;
+  top: 50%;
+  margin-top: -52px; */
+  transform: translateY(175%);
+  opacity: 1;
+  text-align: left;
+  animation: up 2s ease-in-out;
+}
+header .textos .nombre {
+  font-size: 50px;
+  font-weight: 600;
+}
+header .textos .nombre span {
+  font-weight: 300;
+}
+header .textos h3 {
+  font-weight: 300;
+  font-size: 25px;
+  font-style: italic;
 }
 
-header .menu{
-    width: 100%;
-    text-align: right;
-}
-
-header .menu a{
-    color: white;
-    font-size: 20px;
-    font-weight: 300;
-    display: inline-block;
-    margin: 40px 20px;
-    text-decoration: none;
-    position: relative;
+@keyframes down {
+  from {
+    opacity: 0;
+    transform: translateY(-66px);
+  }
+  to {
     transform: translateY(0px);
     opacity: 1;
-    /* animation: down 1.5s ease-in-out; */
+  }
 }
-
-header .menu a:first-child{
-    animation: down 1.5s ease-in-out;
-}
-
-header .menu a:nth-child(2){
-    animation: down 2s ease-in-out;
-}
-
-header .menu a:nth-child(3){
-    animation: down 2.5s ease-in-out;
-}
-
-header .menu a:nth-child(4){
-    animation: down 3s ease-in-out;
-}
-
-@keyframes down{
-
-    from{
-        opacity: 0;
-        transform: translateY(-66px);
-    }
-
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    
-}
-
-header .menu a:hover{
-    text-decoration: underline;
-
-}
-
-header .textos{
-    width: 100%;
-    color: white;
-    /* position: absolute;
-    top: 50%;
-    margin-top: -52px; */
-    transform: translateY(175%);
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(450%);
+  }
+  to {
     opacity: 1;
-    text-align: left;
-    animation: up 2s ease-in-out;
+    transform: translateY(175%);
+  }
 }
-
-@keyframes up{
-
-    from{
-        opacity: 0;
-        transform: translateY(450%);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(175%);
-    }
-}
-
-header .textos .nombre{
-
-    font-size: 50px;
-    font-weight: 600;
-}
-
-header .textos .nombre span{
-    font-weight: 300;
-}
-
-header .textos h3{
-    font-weight: 300;
-    font-size: 25px;
-    font-style: italic;
-}
-
 /*--    MAIN   --*/
-
-.main{
-    background: url('../img/white_leather.png');
-    background-repeat: repeat;
+.main {
+  background: url("../img/white_leather.png");
+  background-repeat: repeat;
 }
-
-.main .acercade .contenedor{
-    overflow: visible;
-    position: relative;
+.main .acercade .contenedor {
+  overflow: visible;
+  position: relative;
 }
-
-.main .acercade .foto{
-    width: 80%;
-    position: absolute;
-    left: 0;
-    top: -50px;
-    z-index: 0;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.36);
+.main .acercade .foto {
+  width: 80%;
+  position: absolute;
+  left: 0;
+  top: -50px;
+  z-index: 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.36);
 }
-
-.main .acercade .foto img{
-    width: 100%;
-    vertical-align: top;
+.main .acercade .foto img {
+  width: 100%;
+  vertical-align: top;
 }
-
-.main .acercade article{
-    background: white;
-    padding: 40px;
-    width: 50%;
-    position: relative;
-    top: 500px;
-    z-index: 1;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.36);
-    float: right;
+.main .acercade article {
+  background: white;
+  padding: 40px;
+  width: 50%;
+  position: relative;
+  top: 500px;
+  z-index: 1;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.36);
+  float: right;
 }
-
-.main .acercade article h3{
-    font-size: 50px;
-    font-weight: 300px;
-    margin-bottom: 40px;
+.main .acercade article h3 {
+  font-size: 50px;
+  font-weight: 300px;
+  margin-bottom: 40px;
 }
-
-.main .acercade article p{
-    line-height: 28px;
-    margin-bottom: 15px;
+.main .acercade article p {
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+.main .menu {
+  padding-top: 570px;
+  margin-bottom: 40px;
+}
+.main .menu .titulo {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.main .menu .contenedor-menu, .main .menu .contenedor-menu-2 {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 10px;
+  overflow: hidden;
+}
+.main .menu article {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+.main .menu .categoria {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.main .menu .platillo {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 4px dotted #000;
+  overflow: hidden;
+}
+.main .menu .nombre {
+  font-size: 20px;
+  margin-bottom: 15px;
+  float: left;
+}
+.main .menu .precio {
+  font-size: 20px;
+  margin-bottom: 15px;
+  float: right;
+}
+.main .menu .descripcion {
+  font-size: 16px;
+  color: #676767;
+  clear: both;
+  /*RAS PARA QUE NO FLOTE Y SE QUITE DE AMBOS LADOS*/
+}
+.main .galeria {
+  overflow: hidden;
+}
+.main .galeria .foto {
+  width: 25%;
+  float: left;
+}
+.main .galeria .foto img {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.7;
+}
+.main .galeria .foto img:hover {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.main .ubicacion {
+  background: white;
+  padding: 60px 0;
+  overflow: hidden;
+}
+.main .ubicacion .titulo {
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.main .ubicacion .direccion {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.main .ubicacion .horarios {
+  float: right;
+  width: 50%;
+  text-align: right;
+  overflow: hidden;
+  /*cuando trabajamos con float,se recomienda poner esto en el padre para que oculte vainas raras*/
+}
+.main .ubicacion .direccion .calle {
+  margin-bottom: 15px;
+}
+.main .ubicacion .horarios h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main .ubicacion .horarios .entre-semana, .main .ubicacion .horarios .finde-semana {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.main .mapa {
+  width: 100%;
+  overflow: hidden;
+}
+.main .main iframe {
+  width: 100%;
+  max-width: 600px;
 }
 
 /*--    MENU    --*/
-
-.main .menu{
-    padding-top: 570px;
-    margin-bottom: 40px;
-
-}
-
-
-.main .menu .titulo{
-    font-size: 40px;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-
-.main .menu .contenedor-menu,.main .menu .contenedor-menu-2{
-    border: 1px solid #000;
-    background: transparent;
-    padding: 10px;
-    overflow: hidden;
-}
-
-.main .menu article{
-    width: 50%;
-    float: left;
-    padding: 20px;
-}
-
-.main .menu .categoria{
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.main .menu .platillo{
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 4px dotted #000;
-    overflow: hidden;
-}
-
-.main .menu .nombre{
-    font-size: 20px;
-    margin-bottom: 15px;
-    float: left;
-}
-
-.main .menu .precio{
-    font-size: 20px;
-    margin-bottom: 15px;
-    float: right;
-}
-
-.main .menu .descripcion{
-    font-size: 16px;
-    color: #676767;
-    clear: both; /*RAS PARA QUE NO FLOTE Y SE QUITE DE AMBOS LADOS*/
-}
-
 /*--    GALERIA     --*/
-
-.main .galeria{
-    overflow: hidden;
-}
-
-.main .galeria .foto{
-    width: 25%;
-    float: left;
-}
-
-.main .galeria .foto img{
-    width: 100%;
-    vertical-align: top;
-    opacity: .7;
-}
-
-.main .galeria .foto img:hover{
-    opacity: 1;
-    transition: all .3s ease;
-}
-
 /*--    UBICACION   --*/
-
-
-.main .ubicacion{
-    background: white;
-    padding: 60px 0;
-    overflow: hidden;
-}
-
-.main .ubicacion .titulo{
-    text-align: center;
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
-
-.main .ubicacion .direccion{
-    float: left;
-    width: 50%;
-    text-align: left;
-}
-
-.main .ubicacion .horarios{
-    float: right;
-    width: 50%;
-    text-align: right;
-    overflow: hidden; /*cuando trabajamos con float,se recomienda poner esto en el padre para que oculte vainas raras*/
-}
-
-.main .ubicacion .direccion .calle{
-    margin-bottom: 15px;
-} 
-
-.main .ubicacion .horarios h4{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.main .ubicacion .horarios .entre-semana,.main .ubicacion .horarios .finde-semana{
-    width: 50%;
-    float: left;
-    text-align: center;
-}
-
-.main .mapa{
-    width: 100%;
-    overflow: hidden;
-}
-
-.main .main iframe{
-    width: 100%;
-    max-width: 600px;
-}
-
 /*--        FOOTER     --*/
-
-footer{
-    background: #000;
+footer {
+  background: #000;
 }
-
-footer .copyright{
-    text-align: center;
-    padding: 15px 0;
-    color: white;
+footer .copyright {
+  text-align: center;
+  padding: 15px 0;
+  color: white;
 }
 
 /*--        MEDIA QUERIES       --*/
+@media screen and (max-width: 800px) {
+  header .contenedor {
+    position: static;
+    height: auto;
+  }
+  header .textos {
+    position: static;
+    margin: 100px 0;
+    animation: unset;
+    transform: unset;
+  }
+  header .menu {
+    text-align: center;
+  }
+  header .menu a {
+    margin: 10px 20px;
+  }
+  header .textos .nombre {
+    font-size: 30px;
+  }
+  header .textos h3 {
+    font-size: 18px;
+  }
 
-@media screen and (max-width:800px){
+  .main .acercade .foto {
+    width: 100%;
+    position: relative;
+  }
+  .main .acercade article {
+    position: relative;
+    width: 100%;
+    top: -50px;
+    transform: translate(0px, 0);
+  }
+  .main .menu {
+    padding-top: 300px;
+  }
+  .main .menu article {
+    width: 100%;
+  }
+  .main .galeria .foto {
+    width: 50%;
+  }
+  .main .mapa {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main .acercade article h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
 
+  .main .menu article .nombre, .main .menu article .nombre {
+    font-size: 16px;
+    line-height: 16px;
+  }
 
-    header .contenedor{
-        position: static;
-        height: auto;
-    }
-
-    header .textos{
-        position: static;
-        margin: 100px 0;
-        animation: unset;
-        transform: unset;
-    }
-    
-    header .menu{
-        text-align: center;
-    }
-
-    header .menu a{
-        margin: 10px 20px;
-    }
-
-    header .textos .nombre{
-        font-size: 30px;
-    }
-
-    header .textos h3{
-        font-size: 18px;
-    }
-
-    .main .acercade .foto{
-        width: 100%;
-        position: relative;
-    }
-
-    .main .acercade article{
-        position: relative;
-        width: 100%;
-        top: -50px;
-        transform: translate(0px,0)
-    }
-
-    .main .menu {
-        padding-top: 300px;
-    }
-
-    .main .menu article {
-        width: 100%;
-    }
-
-    .main .galeria .foto{
-        width: 50%;
-    }
-
-    .main .mapa {
-        width: 80%;
-        margin: auto;
-    }
+  .main .ubicacion .direccion {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
 }
 
-@media screen and (max-width:400px){
-
-    .main .acercade article h3{
-        font-size: 34px;
-        margin-bottom: 10px;
-    }
-
-    .main .menu article .nombre, .main .menu article .nombre{
-        font-size: 16px;
-        line-height: 16px;
-    }
-
-    .main .ubicacion .direccion{
-        margin-bottom: 15px;
-    }
-
-    .main .ubicacion .direccion, .main .ubicacion .direccion{
-        width: 100%;
-        text-align: center;
-    }
-    
-}
+/*# sourceMappingURL=style.css.map */

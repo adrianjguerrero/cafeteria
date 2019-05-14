@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+  }
+  
+  .contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /*--    HEADER      --*/
+  
+  header {
+    width: 100%;
+    background: url('../img/portadabg.png') #281a06;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 center;
+    .contenedor {
+      position: relative;
+      height: 700px;
+    }
+    .menu {
+      width: 100%;
+      text-align: right;
+      a {
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        display: inline-block;
+        margin: 40px 20px;
+        text-decoration: none;
+        position: relative;
+        transform: translateY(0px);
+        opacity: 1;
+        /* animation: down 1.5s ease-in-out; */
+        &:first-child {
+          animation: down 1.5s ease-in-out;
+        }
+        &:nth-child(2) {
+          animation: down 2s ease-in-out;
+        }
+        &:nth-child(3) {
+          animation: down 2.5s ease-in-out;
+        }
+        &:nth-child(4) {
+          animation: down 3s ease-in-out;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .textos {
+      width: 100%;
+      color: white;
+      /* position: absolute;
+      top: 50%;
+      margin-top: -52px; */
+      transform: translateY(175%);
+      opacity: 1;
+      text-align: left;
+      animation: up 2s ease-in-out;
+      .nombre {
+        font-size: 50px;
+        font-weight: 600;
+        span {
+          font-weight: 300;
+        }
+      }
+      h3 {
+        font-weight: 300;
+        font-size: 25px;
+        font-style: italic;
+      }
+    }
+  }
+  
+  @keyframes down {
+    from {
+      opacity: 0;
+      transform: translateY(-66px);
+    }
+  
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(450%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(175%);
+    }
+  }
+  
+  
+  /*--    MAIN   --*/
+  
+  .main {
+    background: url('../img/white_leather.png');
+    background-repeat: repeat;
+    .acercade {
+      .contenedor {
+        overflow: visible;
+        position: relative;
+      }
+      .foto {
+        width: 80%;
+        position: absolute;
+        left: 0;
+        top: -50px;
+        z-index: 0;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.36);
+        img {
+          width: 100%;
+          vertical-align: top;
+        }
+      }
+      article {
+        background: white;
+        padding: 40px;
+        width: 50%;
+        position: relative;
+        top: 500px;
+        z-index: 1;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.36);
+        float: right;
+        h3 {
+          font-size: 50px;
+          font-weight: 300px;
+          margin-bottom: 40px;
+        }
+        p {
+          line-height: 28px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .menu {
+      padding-top: 570px;
+      margin-bottom: 40px;
+      .titulo {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .contenedor-menu, .contenedor-menu-2 {
+        border: 1px solid #000;
+        background: transparent;
+        padding: 10px;
+        overflow: hidden;
+      }
+      article {
+        width: 50%;
+        float: left;
+        padding: 20px;
+      }
+      .categoria {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .platillo {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 4px dotted #000;
+        overflow: hidden;
+      }
+      .nombre {
+        font-size: 20px;
+        margin-bottom: 15px;
+        float: left;
+      }
+      .precio {
+        font-size: 20px;
+        margin-bottom: 15px;
+        float: right;
+      }
+      .descripcion {
+        font-size: 16px;
+        color: #676767;
+        clear: both;
+        /*RAS PARA QUE NO FLOTE Y SE QUITE DE AMBOS LADOS*/
+      }
+    }
+    .galeria {
+      overflow: hidden;
+      .foto {
+        width: 25%;
+        float: left;
+        img {
+          width: 100%;
+          vertical-align: top;
+          opacity: .7;
+          &:hover {
+            opacity: 1;
+            transition: all .3s ease;
+          }
+        }
+      }
+    }
+    .ubicacion {
+      background: white;
+      padding: 60px 0;
+      overflow: hidden;
+      .titulo {
+        text-align: center;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 300;
+        margin-bottom: 40px;
+      }
+      .direccion {
+        float: left;
+        width: 50%;
+        text-align: left;
+      }
+      .horarios {
+        float: right;
+        width: 50%;
+        text-align: right;
+        overflow: hidden;
+        /*cuando trabajamos con float,se recomienda poner esto en el padre para que oculte vainas raras*/
+      }
+      .direccion .calle {
+        margin-bottom: 15px;
+      }
+      .horarios {
+        h4 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .entre-semana, .finde-semana {
+          width: 50%;
+          float: left;
+          text-align: center;
+        }
+      }
+    }
+    .mapa {
+      width: 100%;
+      overflow: hidden;
+    }
+    .main iframe {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  
+  /*--    MENU    --*/
+  
+  /*--    GALERIA     --*/
+  
+  /*--    UBICACION   --*/
+  
+  /*--        FOOTER     --*/
+  
+  footer {
+    background: #000;
+    .copyright {
+      text-align: center;
+      padding: 15px 0;
+      color: white;
+    }
+  }
+  
+  /*--        MEDIA QUERIES       --*/
+  
+  @media screen and (max-width: 800px) {
+    header {
+      .contenedor {
+        position: static;
+        height: auto;
+      }
+      .textos {
+        position: static;
+        margin: 100px 0;
+        animation: unset;
+        transform: unset;
+      }
+      .menu {
+        text-align: center;
+        a {
+          margin: 10px 20px;
+        }
+      }
+      .textos {
+        .nombre {
+          font-size: 30px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+    .main {
+      .acercade {
+        .foto {
+          width: 100%;
+          position: relative;
+        }
+        article {
+          position: relative;
+          width: 100%;
+          top: -50px;
+          transform: translate(0px, 0);
+        }
+      }
+      .menu {
+        padding-top: 300px;
+        article {
+          width: 100%;
+        }
+      }
+      .galeria .foto {
+        width: 50%;
+      }
+      .mapa {
+        width: 80%;
+        margin: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width:400px){
+
+    .main .acercade article h3{
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .main .menu article .nombre, .main .menu article .nombre{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .main .ubicacion .direccion{
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
