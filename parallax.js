@@ -1,10 +1,11 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
     
+    var anchoVentana = document.documentElement.clientWidth;
 
     $(window).scroll(function(){
-        var anchoVentana = $(window).width();
 
         if(anchoVentana>800){
+            
             var scroll = $(window).scrollTop();
 
             //parallax hacia abajo para el cafe licidad
@@ -31,9 +32,8 @@ $(document).ready(function () {
         }
     });
     //cada que haya un cambio del tamaño en la ventana(como voltear tabla)
-        (window).resize(function(){
+        $(window).resize(function(){
 
-            var anchoVentana = $(window).width();
 
             if(anchoVentana<800){
                 $('article .acercade').css({
