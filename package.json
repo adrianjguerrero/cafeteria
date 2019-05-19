@@ -1,0 +1,29 @@
+{
+  "name": "cafeteria",
+  "version": "1.0.0",
+  "description": "https://adrianjguerrero.github.io/cafeteria/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel js -d prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianjguerrero/cafeteria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianjguerrero/cafeteria/issues"
+  },
+  "homepage": "https://github.com/adrianjguerrero/cafeteria#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}
