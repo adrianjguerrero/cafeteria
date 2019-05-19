@@ -1,4 +1,8 @@
+import '../scss/style.scss';
+
 document.addEventListener('DOMContentLoaded', function() {
+
+
 
   
     var acercaDe = document.getElementById('acercade').offsetTop;
