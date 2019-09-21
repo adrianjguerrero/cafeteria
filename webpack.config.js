@@ -25,12 +25,5 @@ module.exports = {
       loader: 'url-loader?limit=1000000' }
     ]
   },
-  plugins : [new MiniCssExtractPlugin(),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-          postcss: [
-              autoprefixer()
-          ]
-      }
-  }) ]
+  plugins : [new MiniCssExtractPlugin()]
 };
